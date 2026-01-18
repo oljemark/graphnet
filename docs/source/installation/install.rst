@@ -60,9 +60,9 @@ Installation with km3io (KM3NeT)
 
 This installation is only necessary if you want to process KM3NeT/ARCA or KM3NeT/ORCA files. Processing means converting them from a `.root` offline format into a suitable format for training using |graphnet|. If you already have your KM3NeT data in `SQLite` or `parquet` format and only want to train a model or perform inference on this database, this specific installation is not needed.
 
-Note that this installation will add `km3io` ensuring it is built with a compatible versions. The steps below are provided for a conda environment, with an enviroment created in the same way it is done above in this page, but feel free to choose a different enviroment setup.
+Note that this installation will add `km3io` ensuring it is built with a compatible version. The steps below are provided for a conda environment, with an environment created in the same way it is done above in this page, but feel free to choose a different environment setup.
 
-As mentioned, it is highly reommended to create a conda enviroment where your installation is done to do not mess up any dependecy. It can be done with the following commands:
+As mentioned, it is highly recommended to create a conda environment where your installation is done to do not mess up any dependency. It can be done with the following commands:
 
 .. code-block:: bash
 
@@ -71,23 +71,23 @@ As mentioned, it is highly reommended to create a conda enviroment where your in
    # Activate the environment and move to the graphnet repository you just cloned. If using conda:
    conda activate <full-path-to-env>
 
-The isntallation of GraphNeT is then done by:
+The installation of GraphNeT is then done by:
 
 .. code-block:: bash
 
    git clone https://github.com/graphnet-team/graphnet.git
    cd graphnet
 
-Choose the appropriate requirements file based on your system. Here there is just an example of installation with PyTorch-2.5.1 but check the matrix above for a full idea of all the versions can be installed.
+Choose the appropriate requirements file based on your system. Here there is just an example of installation with PyTorch-2.5.1 but check the matrix above for a full idea of all the versions that can be installed.
 
-For CPU-only enviroments:
+For CPU-only environments:
 
 .. code-block:: bash
 
    pip3 install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/cpu
    pip3 install -e .[torch-25] -f https://data.pyg.org/whl/torch-2.5.1+cpu.html
 
-For GPU enviroments with, for instance, CUDA 11.8 drivers:
+For GPU environments with, for instance, CUDA 11.8 drivers:
 
 .. code-block:: bash
 
